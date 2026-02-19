@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="header">
+  <h1>Real-Time Housing Intelligence</h1>
+</section>
+
+<section class="kpis">
+  <div class="kpi"><span id="price">0</span><p>Avg Price</p></div>
+  <div class="kpi"><span id="houses">0</span><p>Total Houses</p></div>
+  <div class="kpi"><span id="renov">0</span><p>Renovated</p></div>
+</section>
+
+<div class="viz">
+  <iframe src="{{ tableau_url }}"></iframe>
+</div>
+
+{% endblock %}

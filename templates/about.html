@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- ================= HERO ================= -->
+<section class="about-hero">
+  <img src="{{ url_for('static', filename='img/about-hero.jpg') }}" alt="Housing AI">
+  <div class="about-hero-overlay">
+    <h1>About Housing AI Platform</h1>
+    <p>Futuristic analytics system transforming housing market insights.</p>
+  </div>
+</section>
+
+
+<!-- ================= MISSION ================= -->
+<section class="about-section">
+
+  <div class="about-text">
+    <h2>Our Mission</h2>
+
+    <p>
+      Housing AI is an advanced analytics platform designed to visualizereal-time housing market trends using interactive dashboards and
+      intelligent data storytelling powered by Tableau and Flask.The platform enables analysts, investors, and researchers to explore
+      pricing behavior, renovation impact, and structural property insights through an immersive cyber-style visual interface.By combining modern web technologies with powerful business intelligence
+      visualization, Housing AI delivers a next-generation decision-support
+      experience for the real estate ecosystem.
+    </p>
+  </div>
+
+  <div class="about-image">
+    <img src="{{ url_for('static', filename='img/team.jpg') }}" alt="Team">
+  </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact-section">
+
+  <div class="contact-container">
+
+    <!-- LEFT INFO PANEL -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+
+      <p>
+        Have questions about housing analytics, dashboards, or this platform?
+        Reach out and our team will respond quickly.
+      </p>
+
+      <div class="info-item">📧 228x1a42e7@khitguntur.ac.in</div>
+      <div class="info-item">📍 Andhra Pradesh, India</div>
+      <div class="info-item">☎ +91 0000000000</div>
+    </div>
+
+
+
+
+  </div>
+
+</section>
+
+{% endblock %}

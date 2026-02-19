@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="header">
+  <h1>Housing Market Story</h1>
+</section>
+
+<div class="viz full">
+  <iframe src="{{ tableau_url }}"></iframe>
+</div>
+
+{% endblock %}
