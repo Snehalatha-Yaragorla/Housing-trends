@@ -1,0 +1,317 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* BODY */
+body{
+  font-family: "Segoe UI", sans-serif;
+  background:#050510;
+  color:#e0e7ff;
+  display:flex;
+  min-height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar{
+  width:220px;
+  background:#07071a;
+  border-right:1px solid #1f1f3a;
+  padding:25px;
+  height:100vh;
+}
+
+.logo{
+  color:#38bdf8;
+  margin-bottom:30px;
+  font-size:20px;
+}
+
+.sidebar a{
+  display:block;
+  padding:10px;
+  margin:8px 0;
+  color:#a5b4fc;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+  background:#0ea5e9;
+  color:#fff;
+  box-shadow:0 0 12px #0ea5e9;
+}
+
+/* ================= MAIN ================= */
+.main{
+  flex:1;
+  padding:25px;
+}
+
+/* ================= HEADER ================= */
+.header h1{
+  font-size:28px;
+  margin-bottom:20px;
+  color:#38bdf8;
+}
+
+/* ================= KPI CARDS ================= */
+.kpis{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.kpi{
+  background:#07071a;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  border:1px solid #1f1f3a;
+  transition:0.3s;
+}
+
+.kpi:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 15px #38bdf8;
+}
+
+.kpi span{
+  font-size:22px;
+  color:#22d3ee;
+}
+
+/* ================= TABLEAU ================= */
+.viz{
+  height:70vh;
+}
+
+.viz.full{
+  height:85vh;
+}
+
+.viz iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  border-radius:12px;
+  box-shadow:0 0 25px rgba(56,189,248,0.3);
+}
+
+/* ================= ABOUT TEXT ================= */
+.about{
+  max-width:700px;
+  line-height:1.7;
+  margin-bottom:40px;
+}
+
+/* ================= CONTACT SECTION ================= */
+.contact-wrapper{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:40px;
+}
+
+/* LEFT CONTACT INFO */
+.contact-info{
+  background:rgba(10,10,30,0.6);
+  border:1px solid #1f2a44;
+  padding:30px;
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 20px rgba(56,189,248,0.15);
+}
+
+.contact-info h2{
+  color:#38bdf8;
+  margin-bottom:15px;
+}
+
+.info-item{
+  margin-top:12px;
+  color:#c7d2fe;
+  font-size:14px;
+}
+
+/* RIGHT CONTACT FORM */
+.contact-card{
+  background:rgba(10,10,30,0.7);
+  border:1px solid #1f2a44;
+  padding:30px;
+  border-radius:16px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 25px rgba(56,189,248,0.2);
+
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+/* INPUTS */
+.contact-card input,
+.contact-card textarea{
+  background:#020617;
+  border:1px solid #1f2a44;
+  padding:12px;
+  border-radius:8px;
+  color:white;
+  font-size:14px;
+  outline:none;
+  transition:0.25s;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus{
+  border-color:#38bdf8;
+  box-shadow:0 0 10px rgba(56,189,248,0.4);
+}
+
+/* BUTTON */
+.contact-card button{
+  background:linear-gradient(135deg,#0ea5e9,#22d3ee);
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contact-card button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 18px rgba(56,189,248,0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+
+  .sidebar{
+    width:180px;
+    padding:15px;
+  }
+
+  .contact-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .viz{
+    height:60vh;
+  }
+}
+/* ===== ABOUT HERO SIZE FIX (no design change) ===== */
+
+.about-hero{
+  position: relative;
+  width: 100%;
+  height: 260px;      /* limits banner height */
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.about-hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* prevents full-page stretching */
+  display: block;
+}
+
+.about-hero-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+}
+/* ===== HERO SECTION ENHANCEMENT ===== */
+
+.hero{
+  padding:60px 40px 40px;
+}
+
+.hero-container{
+  max-width:900px;
+}
+
+/* Heading spacing */
+.hero h1{
+  font-size:36px;
+  margin-bottom:12px;
+}
+
+/* Paragraph spacing */
+.hero p{
+  color:#cbd5f5;
+  margin-bottom:18px;
+  line-height:1.6;
+}
+
+/* CTA buttons */
+.hero-links{
+  display:flex;
+  gap:14px;
+  margin-bottom:20px;
+}
+
+.btn-primary,
+.btn-secondary{
+  padding:10px 18px;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.25s;
+}
+
+/* Keep neon theme intact */
+.btn-primary{
+  background:linear-gradient(135deg,#0ea5e9,#22d3ee);
+  color:white;
+}
+
+.btn-primary:hover{
+  box-shadow:0 0 14px rgba(56,189,248,0.6);
+}
+
+.btn-secondary{
+  border:1px solid #38bdf8;
+  color:#38bdf8;
+}
+
+.btn-secondary:hover{
+  background:rgba(56,189,248,0.1);
+}
+
+/* Feature list spacing */
+.hero-features{
+  list-style:none;
+  margin-top:10px;
+}
+
+.hero-features li{
+  margin-bottom:6px;
+  color:#c7d2fe;
+}
+
+/* ===== RESPONSIVE ONLY (no redesign) ===== */
+
+@media(max-width:768px){
+
+  .hero{
+    padding:40px 20px;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+  .hero-links{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
